@@ -2,13 +2,19 @@
 
 This repository shows one of my assignments in Machine Learning where I have achieved an almost perfect score of 9.9/10.0 as shown below:
 
+![FinalGrade](Screenshots/Finalgrade.png)
+
 With the Python notebook in this repository, we experiment with a synthetic dataset shaped like dual moons, and we attempt to create and fit models best of the synthetic data.
 
 Specifically, we write code to generate the feature matrix `X` and the target array `y` using the `make_moons` function from the `sklearn.datasets` module with the parameters: `n_samples=250`, `noise=0.1`, and `random_state=42`. After creating the dataset, call `plot_decision_surface(X, y)` to visualize the data distribution.
 
+![Part0](Screenshots/part0.png)
+
 ## Part 1: Train-Test Split
 
 Write code to split the generated dataset into training and testing sets, allocating 80% of the data for training and 20% for testing. Use `random_state=42` to ensure reproducibility. Store the resulting arrays in `X_train`, `X_test`, `y_train`, and `y_test`. After creating the dataset, call again `plot_decision_surface(X_train, y_train, X_test, y_test)` to visualize the train and test data distribution.
+
+![Part1](Screenshots/part1.png)
 
 ## Part 2: Logistic Regression and Model Creation
 
@@ -23,6 +29,8 @@ Provide substantiated answers to the following questions:
 3. Do you think logistic regression is an appropriate model for this dataset? Why or why not?
 4. Does the model appear to overfit or underfit the data? What evidence supports your conclusion?
 
+![Part3](Screenshots/part3.png)
+
 ## Part 4: Decision Tree Model Creation
 
 Write code to fit a decision tree classifier to the training data and store the model in a variable named `dt`. Next, compute the accuracy, precision, and recall for both the training and testing sets, and store the results in the following variables: `train_accuracy`, `train_precision`, `train_recall`, `test_accuracy`, `test_precision`, and `test_recall`.
@@ -34,6 +42,9 @@ Provide well-supported answers to the following questions:
 2.  Why is the decision boundary of the decision tree seems a heavyside step function? Does this structure contribute to overfitting or underfitting, and can you observe these issues in specific regions of the data?
 3.  How do the decision boundaries produced by decision trees differ from those of logistic regression, particularly when dealing with nonlinear patterns?
 4.  What are the strengths and weaknesses of decision trees compared to logistic regression?
+
+![Part5](Screenshots/part5.png)
+![Part5b](Screenshots/part5b.png)
 
 ## Part 6: SVM Model Creation
 
@@ -50,9 +61,13 @@ Provide well-reasoned answers to the following questions:
 6. In what scenarios might logistic regression be more suitable, and when would SVM be a better choice?
 7. How do support vectors shape the SVM's decision boundary, and how does this differ from the recursive partitioning method used by decision trees?
 
+![Part7](Screenshots/part7.png)
+
 ## Part 8: Generating an Increasingly Noisy dataset
 
 The dataset used in the previous exercies had an easy and well-defined decision boundary. However, real business datasets contains noise and errors, making the classification task more complex and intrincate. To generate a more realistic dataset, write code to generate a new feature matrix `X` and a target array `y` using the `make_moons` function with the parameters: `n_samples=250`, `noise=0.4`, and `random_state=42`. Then, split the generated dataset into training and testing sets, allocating 80% of the data for training and 20% for testing. Use `random_state=42` to ensure reproducibility. Store the resulting arrays in `X_train`, `X_test`, `y_train`, and `y_test`. Finally, call again `plot_decision_surface(X_train, y_train, X_test, y_test)` to visualize the new train and test data distribution.
+
+![Part8](Screenshots/part8.png)
 
 ## Part 9: Impact of Noise on Machine Learning
 
@@ -62,6 +77,10 @@ Provide well-supported answers to the following questions:
 3. How do you think noise will influence the decision tree model? Will the step-like characteristic of the boundaries of decision trees become more irregular or over-complicated due to noise? How might this affect performance, especially on unseen data?
 4. How will the SVM's decision boundary be influenced by noisy data? Do you expect SVM to become more sensitive to noisy data points near the boundary? How might this impact the margin, support vectors, and lead to overfitting or a reduction in margin width?
 5. What strategies can be used to mitigate the effects of noise on these models?
+
+![Part9a](Screenshots/part9a.png)
+![Part9b](Screenshots/part9b.png)
+![Part9c](Screenshots/part9c.png)
 
 ## Part 10: Adding a Regularization Term
 
@@ -91,6 +110,10 @@ Provide well-reasoned answers to the following questions:
 5. Based on these observations, which model would you select, and why?
 6. What modifications could be made to improve the chosen model's performance on the noisy dataset?
 
+![Part11a](Screenshots/part11a.png)
+![Part11b](Screenshots/part11b.png)
+![Part11c](Screenshots/part11c.png)
+
 ## Part 12: Increasing Size of Dataset
 
 Now, let's retrain the least regularized SVM model with `gamma` set to 100, but this time using a larger dataset. Generate the dataset using the `make_moons` function with the parameters: `n_samples=2500`, `noise=0.4`, and `random_state=42`. Next, split the dataset into training and testing sets, with 80% of the data for training and 20% for testing, ensuring reproducibility by using `random_state=42`. Store the resulting arrays as `X_train`, `X_test`, `y_train`, and `y_test`.
@@ -111,3 +134,7 @@ Provide well-reasoned answers to the following questions:
 7. Would you still consider lowering the `gamma` value, or is increasing the dataset size sufficient to address overfitting in this case?
 8. In which situations might increasing the dataset size alone not be enough to mitigate overfitting, and how could adjusting the `gamma` parameter help in such cases?
 9. After evaluating the effect of dataset size on overfitting, which model would you choose? Do you believe that increasing the dataset size sufficiently improves the performance of the high-`gamma` model, or would a lower-`gamma` model perform better for this dataset?"
+
+![Part13a](Screenshots/part13a.png)
+![Part13b](Screenshots/part13b.png)
+![Part13c](Screenshots/part13c.png)
